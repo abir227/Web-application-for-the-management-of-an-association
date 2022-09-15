@@ -1,0 +1,19 @@
+/* .mem{
+    min-height: 10cm;
+} */
+#mem{
+
+    flex-wrap: wrap;
+    box-shadow:0 0 15px rgba(red, green, blue, alpha) ;
+   
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background-color:white;
+    align-self: normal;
+}
+#dec{
+    margin-right: 0px;
+  margin-left: auto;
+  display: flex;
+  justify-content: right;
+}
