@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../../compnent/assets/css/welcomeSiege.css'
-
+import { Button, createTheme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
+import Sidebar from './Sidebar'
+import Card1 from './card1';
+import Card2 from './card2';
+import { Grid } from '@mui/material'
 export default function WelcomeSiege() {
+
+   
     const nav = useNavigate()
-    const [messages, setMessages] = useState([])
     const [Benevole, setBenevole] = useState([])
     const [Membre, setMembre] = useState([])
     function Navigate() {
         nav('/signin')
-
     }
-    useEffect(()=> {
-        fetch('/myMessages').then(res => res.json()).then(result => {
-            setMessages(result[0])
-          
-          })
-    })
+
     useEffect(()=> {
         fetch('/listeBenevole').then(res => res.json()).then(result => {
             setBenevole(result)
@@ -33,75 +33,29 @@ export default function WelcomeSiege() {
     return (
         <>
 
-           <div><button class="btn waves-effect waves-light red" id='dec' type="submit" name="action"
-            onClick={() => {
-                localStorage.clear()
-                Navigate()
+           <div>  <Button variant="outlined" onClick={()=>{
+            localStorage.clear()
+         Navigate()
 
-            }
-            }
-        >Deconnecter
-        </button></div>
+        }
+    } type="submit" color="error">
+  se Deconnecter
 
-      
-        <table>
-            <td><span><div className='card' id='mem'>
-        <tr>
-      <th>envoyer par:</th><th>messages:</th></tr>
-     
-       {
-        messages.map(item=>{
-            return(
-                <tr>
-                    <td>{item.postedBy}</td>
-                    <td>{item.text}</td>
-                </tr>)
-            
-        })
-       }</div></span> </td>
-       
-       <td>
-          <span> <div className='card' id='mem'> <tr><h5>benevole</h5></tr>
-       {
-        Benevole.map(item=>{
-            return(
-                <>
-   
-                <tr>
-                    <td>{item.nom}</td>
-                    <td>{item.prenom}</td>
-                    <td>{item.email}</td>
-                    <td>{item.numtel}</td>
-                </tr>
-                </>
-            )
-        })
-       }
-       </div></span> </td>
-       <td>
-        
-        <div className='card' id='mem'>
-       <tr><h5>membre</h5></tr>
-       {
-        Membre.map(item=>{
-            return(
-                <>
-                
-                <tr>
-                    <td>{item.nom}</td>
-                    <td>{item.prenom}</td>
-                    <td>{item.email}</td>
-                    <td>{item.numtel}</td>
-                    <td>{item.branche}</td>
-                </tr>
-                </>
-            )
-        })
-       }</div></td>
-      </table>
-      <button onClick={()=>{
+</Button></div>
+
+    
+    <br/>
+      <Grid container>
+    <Grid item xs={4}><Card1/> </Grid>
+       <Grid item xs={4}><Card2/></Grid>
+            <Button  variant="contained" onClick={()=>{
         nav('/gestion')
-       }}>Gestion des mat</button>
+       }}>Gestion des matriels</Button >
+       <Sidebar/>
+      </Grid>
+      
+        
+
 
         </>
     )

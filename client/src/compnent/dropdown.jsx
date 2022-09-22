@@ -35,8 +35,6 @@ export default function Dropdown() {
         <div className='dropdown-menu' onMouseEnter={showDropdown} onMouseLeave={ hideDropdown}>
             Découvrir          
             {state ?( <ul className='dropdown-list'  onMouseEnter={showDropdown}>
-                <li className='dropdown-1'><Link to={'/Mission'}>Mission et Equipe </Link></li>
-                {/* <li className='dropdown-2'><Link to={'/Equipe'}>Equipe </Link></li> */}
                 <li className='dropdown-3'><Link to={'/Bib'}>Bibliothèque Juridique </Link></li>
             </ul>):null}
            

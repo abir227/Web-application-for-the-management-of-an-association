@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import Navbar from '../pageSignIn/components/Navbar';
 // import SelectDropdown from 'react-native-select-dropdown'
 import'../compnent/assets/css/communiquer.css'
+import { Button } from '@mui/material';
 export default function Communiquer() {
  const [content,setContent]=useState('')
  const send=localStorage.getItem('bureau')
@@ -61,11 +62,12 @@ Président</span>
        Trésorier</span>
     </div></td></tr>
 </table>
-    <h6>saisir votre Message :</h6>
+    <h5 className='h'>saisir votre Message :</h5>
+    <div className='h'>
     <form>
     <textarea placeholder='votre Message' id='mail' value={content} onChange={(e) => setContent(e.target.value)}/>
     <br/>
-    <button onClick={sendMessage}>envoyer</button></form>
+    <button variant="contained"  onClick={sendMessage}>envoyer</button></form></div>
     
    
     

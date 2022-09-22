@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../compnent/navbar'
 import Agacc from '../compnent/assets/images/agacc.jpg'
 import gauche from '../compnent/assets/images/gauche.png'
 import droite from '../compnent/assets/images/droit.png'
-
 import '../compnent/assets/css/Acceuil.css'
+import MuiCard from '../compnent/MuiCard'
+import MuiCard2 from '../compnent/MuiCard2'
+import MuiCard3 from '../compnent/MuiCard3'
+import { Grid } from '@mui/material'
 
-//import Card from '../compnent/card'
-
-export default function acceuil() {
+export default function Acceuil() {
+  const [isReadMore,setIsReadMore]=useState(false)
   return (
     <div className="all">
         <Navbar/>
@@ -22,14 +24,18 @@ top :' 50%',
 left: '50%',
 }} /> 
 </div>
-<p class='apercu'>Aperçu général </p> 
-      <p> Les troubles moteurs regroupent les troubles du développement des coordinations motrices, les mouvements stéréotypés et les tics.
-Dans les troubles du développement des coordinations, l’enfant présente un retard manifeste dans la mise en place des coordinations nécessaires à l’adaptation au quotidien. Les difficultés sont sensibles au niveau de l’acquisition des comportements d’autonomie personnelle (habillage par exemple), dans les activités scolaires et de loisirs – 5 à 6 p. 100 des enfants entre cinq et onze ans présentent ce type de difficultés. Les garçons sont plus souvent atteints que les filles (2 à 7 garçons pour 1 fille). Les pathologies associées les plus fréquentes sont le déficit d’attention avec ou sans hyperactivité et l’autisme de haut niveau.
-Les mouvements stéréotypés sont des comportements répétitifs, rythmés qui n’ont pas de but évident. Ils peuvent entrer en concurrence avec les autres comportements, ce qui nuit au développement des compétences. Ils apparaissent précocement et interfèrent avec l’adaptation. Ils sont souvent présents dans des formes sévères de déficiences intellectuelles et peuvent être associés à des automutilations.
-Les tics correspondent soit à des mouvements brefs et involontaires (tics moteurs), soit à l’émission de sons ou de cris de manière explosive (tics vocaux). Ces sons peuvent se transformer en verbalisations impulsives à caractère injurieux comme dans le syndrome de Gilles de la Tourette.
-Les troubles du développement, depuis les années 2010 plus couramment appelés troubles neurodéveloppementaux, touchent donc différents aspects du comportement adaptatif. Ils doivent faire l’objet de rééducations visant l’amélioration des symptômes et, lorsque cela est indiqué, d’une prise en charge psychologique destinée à atténuer le retentissement émotionnel des troubles et (ou) à aider la personne à mieux vivre avec ses difficultés.
-Dans AGIM on essaye de prendre soin des personnes qui sont en situation d'handicap moteur et on essaye d'alléger leurs souffrances et les intégrer dans notre société.
-</p>
+<br/>
+<br/>
+<div>
+<Grid container >
+  <Grid item xs={3.7}>
+   <MuiCard/></Grid>
+   <Grid item xs={3.7}><MuiCard2/></Grid>
+  
+  <Grid item xs={3.7}><MuiCard3/></Grid>
+  
+</Grid></div>
+
 <hr></hr>
       <div className='container'>
       <p>Contactez-nous</p>

@@ -9,7 +9,14 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
+    }, 
+       mail:{
+        type:String,
+        required:true
     },
+    resetToken:{type:String},
+
+    expireToken:{type:Date},
     comments:[{
         text:String,
         postedBy:String

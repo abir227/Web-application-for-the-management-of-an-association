@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import M from 'materialize-css'
+import { Button } from '@mui/material';
 export default function(){
     const nav=useNavigate();
     function Navigate(){
@@ -9,21 +10,22 @@ export default function(){
     }
   return (
     <div><nav>
-    <div class="nav-wrapper blue darken-4">
+    <div class="nav-wrapper">
       <Link to={'/'} class="brand-logo">AGIM</Link>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
        
         {/* <li><Link to={'/Espace'}>Espace d'échange</Link></li> */}
-        <li>  <button class="btn waves-effect waves-light red" type="submit" name="action" 
-        onClick={()=>{
+        <li> 
+
+  <Button variant="outlined" onClick={()=>{
             localStorage.clear()
          Navigate()
 
         }
-    }
-        >Deconnecter
-    
-  </button>
+    } type="submit" color="error">
+  se Deconnecter
+
+</Button>
 </li>
       </ul>
     </div>

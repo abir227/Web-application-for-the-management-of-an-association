@@ -7,10 +7,6 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const { JWT_SECRET } = require('../keys')
 
-
-
-// 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
-
 router.post('/addMat', (req, res) => {
    const { nom, telephone, produit, lieu,bureau } = req.body
    if (!telephone || !produit || !nom) {

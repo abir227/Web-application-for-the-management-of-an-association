@@ -1,6 +1,4 @@
- body{
-    background-color: #e8e2da ;
-} 
+
 .h{
     color: rgb(49, 174, 49);
     display: block;
@@ -29,4 +27,7 @@
     justify-content: center;
     margin-left : 720px;
     margin-top: 10px;
+  }
+  h6{
+    color: rgba(103, 103, 219, 0.827);
   }

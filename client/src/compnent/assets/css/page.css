@@ -1,6 +1,10 @@
 body{
     font-family: 'Times New Roman';
 
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
 }
 .t1{
     border-spacing: 15px;
@@ -33,12 +37,34 @@ body{
     border-color: blue;
 }
 #sign{
- margin-top: 20%;
-margin-left: 30%; 
-margin-bottom: 10%;
-text-align: center;
-background-color: rgba(0, 0, 255, 0.077);
+ 
+  width: 100%;
+  height: 100%;
+  display: list-item;
+   align-items: center;
+   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.695);
 }
+#col {
+
+  width: 100%;
+  height: 100%;
+  display: list-item;
+   align-items: center;
+   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.695);
+}
+
+#row{
+  width: 100%;
+  height: 100%;
+  display: list-item;
+   align-items: center;
+   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.695);
+
+}
+
 
 
 #tab {
